@@ -9,10 +9,12 @@ does not include 1. Those numbers for which this process ends in 1 are
 happy numbers.
 
 """
-
-
 class Solution:
-    def isHappy(self, n: int) -> bool:
+    """
+    :type n: int
+    :rtype: bool
+    """
+    def isHappy(self, n: int):
         
         seen = set()
         def helper(n):
@@ -26,5 +28,3 @@ class Solution:
             n = sum(map(lambda x:x**2, nList))
 
         return not n in seen
-
-
